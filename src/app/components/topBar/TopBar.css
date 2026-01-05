@@ -1,0 +1,54 @@
+.main-top-bar-container {
+  display: flex;
+  width: 99vw;
+  max-height: 100px;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  flex-direction: row;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: black;
+  .button-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    right: 0px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 9rem;
+  }
+
+  .logoWrapper {
+    background-color: rgb(120 53 15);
+    width: 5rem;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+    border-radius: 9999px;
+  }
+
+  .title {
+    margin-left: 0.5rem;
+    position: relative;
+    transform: translateX(0);
+    transition-property: transform;
+    transition-duration: 700ms;
+    transition-timing-function: ease-in-out;
+    z-index: 0;
+  }
+
+  .titleHidden {
+    transform: translateX(-115%);
+  }
+
+  .custom-button-styles {
+    color: black;
+  }
+}

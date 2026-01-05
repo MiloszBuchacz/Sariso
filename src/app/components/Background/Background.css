@@ -1,0 +1,18 @@
+.background-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  max-height: 89.1vh;
+  overflow: hidden;
+  z-index: 1;
+}
+.single-photo {
+  width: 25vw;
+  height: 25vw;
+  margin-top: 3rem;
+  aspect-ratio: 1 / 1;
+  filter: blur(20);
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+}
