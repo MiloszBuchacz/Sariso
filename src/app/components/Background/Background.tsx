@@ -1,36 +1,39 @@
+"use client";
+
 import Image from "next/image";
-import bulb1 from "../../../../public/figures/bulb1.png";
-import bulb2 from "../../../../public/figures/bulb2.png";
-import gible1 from "../../../../public/figures/gible1.png";
-import gible2 from "../../../../public/figures/gible2.png";
-import gible3 from "../../../../public/figures/gible3.png";
-import gible4 from "../../../../public/figures/gible4.png";
-import gligar1 from "../../../../public/figures/gligar1.png";
-import gligar2 from "../../../../public/figures/gligar2.png";
+import { useLayoutEffect, useState } from "react";
 
 import "./Background.css";
+import { figures } from "../../../../public/figures";
 
 const Background: React.FC = () => {
-  const photos = [
-    bulb1,
-    bulb2,
-    gible1,
-    gible2,
-    gible3,
-    gible4,
-    gligar1,
-    gligar2,
-  ];
+  const [photoSize, setPhotoSize] = useState(0);
+
+  useLayoutEffect(() => {
+    const updateSize = () => {
+      const size = window.innerWidth / 4;
+      setPhotoSize(size);
+    };
+
+    updateSize();
+    window.addEventListener("resize", updateSize);
+
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
 
   return (
     <div className="background-container">
-      {photos?.map((photo, index) => (
-        <Image
-          className="single-photo"
-          src={photo}
-          alt="figure-photo"
+      {figures.map((photo, index) => (
+        <div
           key={index}
-        />
+          className="single-photo"
+          style={{
+            width: photoSize,
+            height: photoSize,
+          }}
+        >
+          <Image src={photo} alt="figure-photo" fill />
+        </div>
       ))}
     </div>
   );

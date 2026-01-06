@@ -1,3 +1,6 @@
+"use client";
+
+import { useIsDesktop } from "@/app/hooks/useIsDesktop";
 import "./Drower.css";
 
 interface DrowerInterface {
@@ -5,6 +8,7 @@ interface DrowerInterface {
 }
 
 const Drower: React.FC<DrowerInterface> = ({ children }) => {
+  if (useIsDesktop()) return;
   return <div className="drower-container"> {children}</div>;
 };
 

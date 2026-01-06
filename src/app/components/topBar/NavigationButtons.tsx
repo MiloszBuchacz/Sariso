@@ -9,29 +9,12 @@ import "./TopBar.css";
 const NavigationButtons: React.FC = () => {
   return (
     <div>
-      {useIsDesktop() ? (
+      {useIsDesktop() && (
         <div>
           <Button url="/home">home</Button>
           <Button url="/contact">contact</Button>
           <Button url="/aboutUs">about us</Button>
           <Button url="/projects">our work</Button>
-        </div>
-      ) : (
-        <div>
-          <Drower>
-            <Button className="custom-button-styles" url="/home">
-              home
-            </Button>
-            <Button className="custom-button-styles" url="/contact">
-              contact
-            </Button>
-            <Button className="custom-button-styles" url="/aboutUs">
-              about us
-            </Button>
-            <Button className="custom-button-styles" url="/projects">
-              our work
-            </Button>
-          </Drower>
         </div>
       )}
     </div>
