@@ -1,4 +1,29 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .main-div {
-  background-color: red;
-  margin-top: 100px;
+  min-height: 100dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  .main-paragraph {
+    width: 100%;
+    max-width: 900px;
+    padding: 1.25rem;
+    border-radius: 12px;
+    backdrop-filter: blur(20px);
+    .hero-text {
+      margin: 0;
+      width: 100%;
+      font-weight: 100;
+      font-size: clamp(1.1rem, 2.5vw, 2rem);
+      line-height: 1.5;
+      text-align: center;
+    }
+  }
 }
