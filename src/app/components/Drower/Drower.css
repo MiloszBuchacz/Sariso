@@ -11,3 +11,8 @@
   flex-direction: column;
   align-items: center;
 }
+.drower-button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}

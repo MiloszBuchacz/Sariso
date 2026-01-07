@@ -11,10 +11,10 @@ export default function Home() {
     <>
       <Background />
       <TopBar />
-      <main style={{ position: "relative", zIndex: 2 }}>
-        <HomePage />
-      </main>
-      <Drower>
+      {/* <main style={{ position: "relative", zIndex: 2 }}> */}
+      {/* <HomePage /> */}
+      {/* </main> */}
+      {/* <Drower>
         <Button className="custom-button-styles" url="/home">
           home
         </Button>
@@ -27,7 +27,7 @@ export default function Home() {
         <Button className="custom-button-styles" url="/projects">
           our work
         </Button>
-      </Drower>
+      </Drower> */}
     </>
   );
 }

@@ -1,5 +1,10 @@
 .main-top-bar-container {
-  display: flex;
+  width: 100vw;
+  height: 100px;
+  background-color: red;
+  top: 0;
+  position: fixed;
+  /* display: flex;
   width: 100vw;
   max-height: 100px;
   top: 0;
@@ -9,7 +14,8 @@
   flex-direction: row;
   padding-left: 1rem;
   padding-right: 1rem;
-  background-color: black;
+  background-color: black; */
+  /* overflow: hidden;
   .button-container {
     position: absolute;
     display: flex;
@@ -39,14 +45,15 @@
     position: relative;
     transform: translateX(0);
     transition-property: transform;
-    transition-duration: 700ms;
+    transition-duration: 400ms;
     transition-timing-function: ease-in-out;
-    z-index: 0;
+    /* transition-delay: 0.4s; */
+  /* z-index: 0;
   }
 
   .titleHidden {
     transform: translateX(-115%);
-  }
+  } */
 }
 .custom-button-styles {
   color: black;
