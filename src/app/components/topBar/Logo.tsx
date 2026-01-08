@@ -9,8 +9,8 @@ const Logo: React.FC = () => {
   const scrolled = useHasScrolled(10);
 
   return (
-    <div className="container" style={{ backgroundColor: "red" }}>
-      {/* <div
+    <div className="container">
+      <div
         className="logoWrapper"
         style={{
           height: "100px",
@@ -27,9 +27,9 @@ const Logo: React.FC = () => {
           src={logotyp}
           alt="logo"
         />
-      </div> */}
+      </div>
 
-      {/* <span
+      <span
         className={`title ${scrolled ? "titleHidden" : ""}`}
         style={{ transition: scrolled ? "0.3s ease 0s" : "0.3s ease 0.2s" }}
       >
@@ -38,7 +38,7 @@ const Logo: React.FC = () => {
           src={logo}
           alt="logo"
         />
-      </span> */}
+      </span>
     </div>
   );
 };

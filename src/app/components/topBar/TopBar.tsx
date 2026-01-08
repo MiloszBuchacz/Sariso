@@ -5,16 +5,8 @@ import "./TopBar.css";
 
 const TopBar: React.FC = () => {
   return (
-    <div
-      className="main-top-bar-container"
-      // style={{
-      //   zIndex: "12",
-      //   backgroundColor: "red",
-      //   height: "100px",
-      //   overflow: "hidden",
-      // }}
-    >
-      {/* <div className="top-bar-logo">
+    <div className="main-top-bar-container">
+      <div className="top-bar-logo">
         <div
           style={{
             height: "100px",
@@ -29,7 +21,7 @@ const TopBar: React.FC = () => {
       </div>
       <div className="button-container">
         <NavigationButtons />
-      </div> */}
+      </div>
     </div>
   );
 };

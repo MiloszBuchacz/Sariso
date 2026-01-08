@@ -13,6 +13,7 @@
 }
 .drower-button {
   position: absolute;
+  z-index: 11;
   top: 2rem;
   right: 2rem;
 }
