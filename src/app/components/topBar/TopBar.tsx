@@ -9,6 +9,7 @@ const TopBar: React.FC = () => {
       <div className="top-bar-logo">
         <div
           style={{
+            height: "100px",
             display: "flex",
             flexDirection: "row",
             justifyContent: "center",

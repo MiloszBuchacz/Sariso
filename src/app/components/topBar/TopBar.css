@@ -1,4 +1,8 @@
 .main-top-bar-container {
+  width: 100vw;
+  height: 100px;
+  top: 0;
+  position: fixed;
   display: flex;
   width: 100vw;
   max-height: 100px;
@@ -10,6 +14,8 @@
   padding-left: 1rem;
   padding-right: 1rem;
   background-color: black;
+  overflow: hidden;
+  z-index: 10;
   .button-container {
     position: absolute;
     display: flex;
@@ -39,8 +45,9 @@
     position: relative;
     transform: translateX(0);
     transition-property: transform;
-    transition-duration: 700ms;
+    transition-duration: 400ms;
     transition-timing-function: ease-in-out;
+    transition-delay: 0.4s;
     z-index: 0;
   }
 

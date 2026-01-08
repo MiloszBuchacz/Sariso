@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: center;
   font-family: var(--font-lora), cursive;
-  font-weight: 100;
+
   background-color: var(--background);
 }
 
@@ -45,7 +45,7 @@
   line-height: 48px;
   letter-spacing: -2.4px;
   text-wrap: balance;
-  color: var(--text-primary);
+  color: #ffffff;
 }
 
 .intro p {
@@ -53,12 +53,12 @@
   font-size: 18px;
   line-height: 32px;
   text-wrap: balance;
-  color: var(--text-secondary);
+  color: #ffffff;
 }
 
 .intro a {
   font-weight: 500;
-  color: var(--text-primary);
+  color: #ffffff;
 }
 
 .ctas {
@@ -85,8 +85,8 @@
 }
 
 a.primary {
-  background: var(--text-primary);
-  color: var(--background);
+  background: #ffffff;
+  color: #ffffff;
   gap: 8px;
 }
 
