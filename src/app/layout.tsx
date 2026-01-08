@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Lora } from "next/font/google";
 import "./globals.css";
-import Head from "./Head";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,9 +20,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <Head />
-      </head>
       <body className={`${lora.variable}`}>{children}</body>
     </html>
   );
