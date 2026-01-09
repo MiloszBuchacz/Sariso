@@ -1,9 +1,12 @@
 "use client";
 
-import { useIsDesktop } from "@/app/hooks/useIsDesktop";
-import "../Drower/Drower.css";
 import { useCallback, useState } from "react";
+
+import { useIsDesktop } from "@/app/hooks/useIsDesktop";
+
 import Button from "../Button/Button";
+
+import "../Drower/Drower.css";
 
 interface DrowerInterface {
   children: React.ReactNode;
@@ -20,7 +23,7 @@ const Drower: React.FC<DrowerInterface> = ({ children }) => {
   return isOpen ? (
     <div className="drower-container">
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <Button onClick={handleToggleDrower}>
+        <Button className="close-drower-button" onClick={handleToggleDrower}>
           <span className="material-symbols-outlined">arrow_forward</span>
         </Button>
 

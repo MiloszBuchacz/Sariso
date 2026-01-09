@@ -1,8 +1,7 @@
 .drower-container {
   display: flex;
-  color: #000;
   z-index: 10;
-  background-color: #fff;
+  background-color: black;
   width: 35vw;
   height: 100vh;
   position: fixed;
@@ -10,10 +9,46 @@
   right: 0;
   flex-direction: column;
   align-items: center;
+  position: fixed;
 }
+
 .drower-button {
-  position: absolute;
+  position: fixed;
   z-index: 11;
   top: 2rem;
   right: 2rem;
+}
+
+.close-drower-button {
+  position: absolute;
+}
+
+.drower-buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.custom-button-styles {
+  color: white;
+  position: relative;
+  padding-bottom: 4px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background: white;
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.active::after {
+  width: 100%;
 }

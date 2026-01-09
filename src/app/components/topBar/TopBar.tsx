@@ -1,4 +1,3 @@
-import Button from "../Button/Button";
 import Logo from "./Logo";
 import NavigationButtons from "./NavigationButtons";
 import "./TopBar.css";
