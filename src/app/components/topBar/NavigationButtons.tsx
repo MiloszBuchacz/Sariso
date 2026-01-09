@@ -1,22 +1,48 @@
 "use client";
 
-import { useIsDesktop } from "@/app/hooks/useIsDesktop";
+import { usePathname } from "next/navigation";
+
 import Button from "../Button/Button";
 
-import "./TopBar.css";
+import "../Drower/Drower.css";
 
-const NavigationButtons: React.FC = () => {
+const NavigationButtons = () => {
+  const pathname = usePathname();
+
   return (
     <div>
-      {useIsDesktop() && (
-        <div>
-          <Button url="/home">home</Button>
-          <Button url="/contact">contact</Button>
-          <Button url="/aboutUs">about us</Button>
-          <Button url="/projects">our work</Button>
-        </div>
-      )}
+      <Button
+        className={`${pathname === "/" && "active"} custom-button-styles`}
+        url="/"
+      >
+        home
+      </Button>
+      <Button
+        className={`${
+          pathname === "/projects" && "active"
+        } custom-button-styles`}
+        url="/projects"
+      >
+        our work
+      </Button>
+      <Button
+        className={`${
+          pathname === "/contact" && "active"
+        } custom-button-styles`}
+        url="/contact"
+      >
+        contact
+      </Button>
+      <Button
+        className={`${
+          pathname === "/aboutUs" && "active"
+        } custom-button-styles`}
+        url="/aboutUs"
+      >
+        about us
+      </Button>
     </div>
   );
 };
+
 export default NavigationButtons;
